@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": [],
+    "lib": ["ES2015", "WebWorker"]
+  },
+  "files": [
+    "src/index.ts"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts"
+  ]
+}
