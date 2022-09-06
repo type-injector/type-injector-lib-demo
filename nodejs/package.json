@@ -1,0 +1,21 @@
+{
+  "name": "type-injector-demo-node-js",
+  "version": "1.0.0",
+  "description": "show usage of typeinjector in node-js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha \"./*.spec.js\""
+  },
+  "author": "emanuel.hein@code-better.it",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.7.15",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  },
+  "dependencies": {
+    "type-injector-demo-common-api": "file:../common-api/type-injector-demo-common-api-1.0.0.tgz"
+  }
+}
