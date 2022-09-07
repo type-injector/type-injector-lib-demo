@@ -5,6 +5,20 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Test angular",
+      "request": "launch",
+      "runtimeArgs": [
+        "run-script",
+        "test",
+      ],
+      "runtimeExecutable": "npm",
+      "cwd": "${workspaceFolder}/angular",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
       "name": "nodejs demo",
       "cwd": "${workspaceFolder}/nodejs",
       "program": "${workspaceFolder}/nodejs/index.js",
@@ -14,5 +28,6 @@
       ],
       "type": "node"
     },
+
   ]
 }

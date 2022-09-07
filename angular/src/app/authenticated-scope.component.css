@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  padding: 5px;
+  border: 1px solid green;
+}
+
+.token {
+  display: inline-block;
+  padding: 3px;
+  margin: 3px;
+  background: lightgray;
+  font-family: monospace;
+}
