@@ -26,7 +26,9 @@
     "@nestjs/platform-express": "^9.0.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "type-injector": "file:../../type-inject/type-injector-1.0.0-alpha.tgz",
+    "type-injector-demo-common-api": "file:../common-api/type-injector-demo-common-api-1.0.0.tgz"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
