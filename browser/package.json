@@ -1,0 +1,25 @@
+{
+  "name": "browser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app-text.component.js",
+  "scripts": {
+    "start": "http-server www",
+    "build": "npm run build:fluent",
+    "build:basic": "esbuild --bundle --target=chrome108 src/app-text.component.basic.js --outfile=www/app-text.component.js",
+    "build:fluent": "esbuild --bundle --target=chrome108 src/app-text.component.js --outfile=www/app-text.component.js",
+    "build:scoped": "esbuild --bundle --target=chrome108 src/app-text.component.scoped.js --outfile=www/app-text.component.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "type-injector": "file:../../type-inject/type-injector-1.0.0-alpha.tgz",
+    "type-injector-demo-common-api": "file:../common-api/type-injector-demo-common-api-1.0.0.tgz"
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.7",
+    "http-server": "^14.1.1"
+  }
+}

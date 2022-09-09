@@ -10,6 +10,7 @@
       "default": "./package.json"
     },
     ".": {
+      "default": "./dist/es2020/index.js",
       "types": "./dist/es2020/index.d.ts",
       "es2020": "./dist/es2020/index.js",
       "node": "./dist/cjs/index.js"

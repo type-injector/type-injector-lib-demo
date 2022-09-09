@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { BusinessService } from 'type-injector-demo-common-api';
-import { BusinessServiceToken, Nothing, TypeInjectorService } from './type-injector.service';
+import { Nothing, TypeInjectorService } from './type-injector.service';
 
 @Component({
   selector: 'app-root',

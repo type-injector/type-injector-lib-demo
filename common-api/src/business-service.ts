@@ -6,10 +6,10 @@ export class BusinessService {
     logger: Logger;
 
     static injectConfig: InjectConfig = {
-        deps: [injectToken.createdValue, Logger],
+        deps: [injectToken.createdValue, injectToken.simpleValue, Logger],
     }
 
-    constructor(createdValue: string, logger: Logger) {
+    constructor(createdValue: string, simpleValue: string, logger: Logger) {
         this.createdValue = createdValue;
         this.logger = logger;
     }
