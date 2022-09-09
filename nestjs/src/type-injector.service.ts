@@ -3,8 +3,11 @@ import {
   InjectToken,
   Logger as TypeInjectorLogger,
   TypeInjector,
-} from 'type-injector';
-import { BusinessService, injectToken } from 'type-injector-demo-common-api';
+} from 'type-injector-lib';
+import {
+  BusinessService,
+  injectToken,
+} from 'type-injector-lib-demo-common-api';
 
 @Injectable()
 export class TypeInjectorService {

@@ -16,6 +16,7 @@
     "mocha": "^10.0.0"
   },
   "dependencies": {
-    "type-injector-demo-common-api": "file:../common-api/type-injector-demo-common-api-1.0.0.tgz"
+    "type-injector-lib": "^1.0.0-alpha-7",
+    "type-injector-lib-demo-common-api": "file:../common-api/type-injector-lib-demo-common-api-1.0.0.tgz"
   }
 }

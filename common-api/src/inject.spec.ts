@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { Logger, TypeInjector } from 'type-injector';
+import { Logger, TypeInjector } from 'type-injector-lib';
 import { BusinessService } from './business-service';
 import { InfoLogger } from './info-logger';
 import { injectToken } from './inject-token.const';

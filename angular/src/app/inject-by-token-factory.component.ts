@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { BusinessService } from 'type-injector-demo-common-api';
+import { BusinessService } from 'type-injector-lib-demo-common-api';
 import { BusinessServiceToken } from './type-injector.service';
 
 @Component({

@@ -1,7 +1,7 @@
 // @ts-check
 const { expect } = require('chai');
-const { TypeInjector, Logger } = require('type-injector');
-const { BusinessService, InfoLogger, injectToken } = require('type-injector-demo-common-api');
+const { TypeInjector, Logger } = require('type-injector-lib');
+const { BusinessService, InfoLogger, injectToken } = require('type-injector-lib-demo-common-api');
 
 const injector = TypeInjector.construct()
     .provideImplementation(Logger, InfoLogger)

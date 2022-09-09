@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { BusinessService } from 'type-injector-demo-common-api';
+import { BusinessService } from 'type-injector-lib-demo-common-api';
 
 @Controller()
 export class AppController {

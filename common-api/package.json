@@ -1,5 +1,5 @@
 {
-  "name": "type-injector-demo-common-api",
+  "name": "type-injector-lib-demo-common-api",
   "version": "1.0.0",
   "description": "framework independant logic",
   "main": "dist/cjs/index.js",
@@ -10,10 +10,10 @@
       "default": "./package.json"
     },
     ".": {
-      "default": "./dist/es2020/index.js",
-      "types": "./dist/es2020/index.d.ts",
       "es2020": "./dist/es2020/index.js",
-      "node": "./dist/cjs/index.js"
+      "node": "./dist/cjs/index.js",
+      "types": "./dist/es2020/index.d.ts",
+      "default": "./dist/es2020/index.js"
     }
   },
   "sideEffects": false,
@@ -27,7 +27,7 @@
   "author": "",
   "license": "MIT",
   "peerDependencies": {
-    "type-injector": "1.0.0-alpha"
+    "type-injector-lib": "^1.0.0-alpha-7"
   },
   "devDependencies": {
     "@types/chai": "^4.3.3",

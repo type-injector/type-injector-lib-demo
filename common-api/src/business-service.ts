@@ -1,4 +1,4 @@
-import { InjectConfig, Logger } from 'type-injector';
+import { InjectConfig, Logger } from 'type-injector-lib';
 import { injectToken } from './inject-token.const';
 
 export class BusinessService {

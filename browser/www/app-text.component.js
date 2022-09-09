@@ -1,5 +1,5 @@
 (() => {
-  // node_modules/type-injector/dist/bundles/type-injector.mjs
+  // node_modules/type-injector-lib/dist/bundles/type-injector-lib.mjs
   var Logger = class {
     error(message, ...details) {
       console.error(message, ...details);
@@ -260,13 +260,13 @@
     }
   };
 
-  // node_modules/type-injector-demo-common-api/dist/es2020/inject-token.const.js
+  // node_modules/type-injector-lib-demo-common-api/dist/es2020/inject-token.const.js
   var injectToken = {
     simpleValue: declareInjectToken("simple value"),
     createdValue: declareInjectToken("created value")
   };
 
-  // node_modules/type-injector-demo-common-api/dist/es2020/business-service.js
+  // node_modules/type-injector-lib-demo-common-api/dist/es2020/business-service.js
   var BusinessService = class {
     constructor(createdValue, simpleValue, logger) {
       this.createdValue = createdValue;
@@ -281,7 +281,7 @@
     deps: [injectToken.createdValue, injectToken.simpleValue, Logger]
   };
 
-  // node_modules/type-injector-demo-common-api/dist/es2020/info-logger.js
+  // node_modules/type-injector-lib-demo-common-api/dist/es2020/info-logger.js
   var InfoLogger = class extends Logger {
     constructor() {
       super(...arguments);

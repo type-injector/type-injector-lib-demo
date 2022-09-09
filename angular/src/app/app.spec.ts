@@ -43,7 +43,7 @@ describe('type injector demo angular', () => {
 
     it('should show authentication token', async () => {
       const token = await authScope.getToken();
-      expect(token).toMatch(/Token[1-9]/);
+      expect(token).toMatch(/Token[0-9]/);
     });
 
     it('should provide token in authenticated scope', async () => {

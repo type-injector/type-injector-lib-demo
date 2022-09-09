@@ -1,6 +1,6 @@
 import { Inject, Injectable, InjectionToken, Optional, SkipSelf } from '@angular/core';
-import { Logger, TypeInjector, InjectToken, InjectorScope } from 'type-injector';
-import { BusinessService, InfoLogger, injectToken } from 'type-injector-demo-common-api';
+import { Logger, TypeInjector, InjectToken, InjectorScope } from 'type-injector-lib';
+import { BusinessService, InfoLogger, injectToken } from 'type-injector-lib-demo-common-api';
 import { AuthToken } from './auth-token.const';
 
 let nextScopeId = 0;

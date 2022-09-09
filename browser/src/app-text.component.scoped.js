@@ -1,6 +1,6 @@
 // @ts-check
-import { Logger, TypeInjector, InjectorScope } from 'type-injector';
-import { BusinessService, InfoLogger, injectToken } from 'type-injector-demo-common-api';
+import { Logger, TypeInjector, InjectorScope } from 'type-injector-lib';
+import { BusinessService, InfoLogger, injectToken } from 'type-injector-lib-demo-common-api';
 
 class AppTextElement extends HTMLElement {
   constructor() {

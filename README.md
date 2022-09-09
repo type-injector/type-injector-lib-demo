@@ -1,5 +1,5 @@
-# Type Injector Demo
-This projects test bundling and usage [type-injector](https://github.com/e-hein/type-injector)
+# Type Injector Lib Demo
+This projects test bundling and usage [type-injector-lib](https://github.com/e-hein/type-injector-lib)
 
 * [common-api]('./common-api') defines an independant business service
 * browser

@@ -1,4 +1,4 @@
-import { ComponentHarness, HarnessQuery, AsyncFactoryFn, LocatorFnResult } from '@angular/cdk/testing';
+import { ComponentHarness, HarnessQuery, LocatorFnResult } from '@angular/cdk/testing';
 
 export class AuthenticatedScopeHarness extends ComponentHarness {
   static hostSelector = 'app-authenticated-scope';
