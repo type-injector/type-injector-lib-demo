@@ -46,10 +46,18 @@ describe('type injector demo angular', () => {
       expect(token).toMatch(/Token[0-9]/);
     });
 
-    it('should provide token in authenticated scope', async () => {
-      const injectDirectly = await authScope.get('app-inject-directly');
-      const token = await authScope.getToken();
-      expect(await injectDirectly.text()).toContain(token);
+    describe('provided token from authenticated scope', () => {
+      it('should be available when injecting via scoped TypeInjectService', async () => {
+        const injectDirectly = await authScope.get('app-inject-directly');
+        const token = await authScope.getToken();
+        expect(await injectDirectly.text()).toContain(token);
+      });
+
+      it('should be available when injecting via factory provider', async () => {
+        const injectDirectly = await authScope.get('app-inject-from-provider');
+        const token = await authScope.getToken();
+        expect(await injectDirectly.text()).toContain(token);
+      });
     });
   });
 });

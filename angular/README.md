@@ -1,27 +1,35 @@
-# Angular
+# Inetgrate type injector lib into angular
+Angular has an own injection system but this system knows nothing about services from ```type-injector-lib```.
+So you have to connect those systems somehow. This example shows three different ways to integrate type injector into angular:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+## 1st variant: [Inject via TypeInjectorService directly in the constructor](./src/app/inject-directly.md)
+  * pros:
+    - you can inject anything without further configuration
+    - you can use angular scopes
+    - you can inject services/constants from angular into TypeInjectorService
+    - proper tree shaking from angular
+  * cons:
+    - you have to deactivate angular inject each time
+    - you have an additional line of code to injecto the ```TypeInjectorService```
 
-## Development server
+## 2nd variant: [Write an Angular ```InjectToken``` with factory](./src/app/inject-by-token-factory.md)
+  * pros
+    - you will have no dependency from your components to ```type-injector-lib```.
+    - there are no tricks needed to prevent angular inject mechanism
+    - proper tree shaking from angular
+  * cons
+    - no support for angular scopes (you can create multiple global injectors)
+    - still requires additional configuration in each component (using ```@Inject(token)```)
+    - you have to implement one token for each service you use
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 3rd variant: [Provider for your ```BusinessService``` factory](./src/app/inject-from-provider.md)
+  * pros
+    - you will have no dependency from your components to ```type-injector-lib```.
+    - there are no tricks needed to prevent angular inject mechanism
+    - it might use Angular scopes
+    - you can inject services/constants from angular into TypeInjectorService
+  * cons
+    - you have to decide where to provide the factory
+      - module/app level might lead to poor tree shaking
+      - component level will need configuration in every component
+    - you have to implement a factory for each service you use

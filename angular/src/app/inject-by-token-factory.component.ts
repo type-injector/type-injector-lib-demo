@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { BusinessService } from 'type-injector-lib-demo-common-api';
-import { BusinessServiceToken } from './type-injector.service';
+import { BusinessServiceToken } from './business-service.token';
 
 @Component({
   selector: 'app-inject-by-token-factory',

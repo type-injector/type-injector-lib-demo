@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { BusinessService } from 'type-injector-lib-demo-common-api';
-import { Nothing, TypeInjectorService } from './type-injector.service';
+import { Nothing } from './nothing.token';
+import { TypeInjectorService } from './type-injector.service';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     typeInjector: TypeInjectorService,
-    @Inject(Nothing) private readonly businessService: BusinessService = typeInjector.get(BusinessService),
+    @Inject(Nothing) private readonly businessService = typeInjector.get(BusinessService),
   ) {}
 
   ngOnInit() {

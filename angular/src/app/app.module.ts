@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AuthenticatedScopeComponent } from './authenticated-scope.component';
 import { InjectByTokenFactoryComponent } from './inject-by-token-factory.component';
 import { InjectDirectlyComponent } from './inject-directly.component';
+import { InjectFromProviderComponent } from './inject-from-provider.component';
 import { IntegrationVariantsComponent } from './integration-variants.component';
 
 @NgModule({
@@ -12,6 +13,7 @@ import { IntegrationVariantsComponent } from './integration-variants.component';
     AppComponent,
     InjectDirectlyComponent,
     InjectByTokenFactoryComponent,
+    InjectFromProviderComponent,
     IntegrationVariantsComponent,
     AuthenticatedScopeComponent,
   ],
