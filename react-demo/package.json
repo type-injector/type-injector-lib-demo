@@ -55,6 +55,8 @@
     "style-loader": "^3.3.1",
     "tailwindcss": "^3.0.2",
     "terser-webpack-plugin": "^5.2.5",
+    "type-injector-lib": "^1.0.0-alpha-7",
+    "type-injector-lib-demo-common-api": "file:../common-api/type-injector-lib-demo-common-api-1.0.0.tgz",
     "typescript": "^4.8.3",
     "web-vitals": "^2.1.4",
     "webpack": "^5.64.4",

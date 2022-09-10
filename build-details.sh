@@ -40,3 +40,10 @@ function buildAngularDemo {
   npm run test -- --code-coverage --browsers ChromeHeadless --watch false
   cd ..
 }
+
+function buildReactDemo {
+  cd react-demo
+  npm i ../common-api/$API_PACKAGE
+  npm run build
+  CI=true npm run test
+}

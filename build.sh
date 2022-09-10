@@ -9,3 +9,4 @@ buildNodeJsDemo
 buildNestJsDemo
 buildBrowserDemo
 buildAngularDemo
+buildReactDemo
