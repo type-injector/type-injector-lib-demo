@@ -1,0 +1,19 @@
+.integration-variant {
+  border: 3px solid;
+  padding: 3px;
+  margin: 5px;
+  text-align: left;
+}
+
+.integration-variant > h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.integration-with-context {
+  border-color: green;
+}
+
+.integration-without-context {
+  border-color: red;
+}

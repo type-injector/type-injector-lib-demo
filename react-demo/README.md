@@ -1,46 +1,104 @@
-# Getting Started with Create React App
+# Inetgrate type injector lib into React
+React has no DI-Container in its core library. But react provides a context that can provide values and services.
+```type-injector-lib``` can get integrated into this context so it provides a complete DI-Container that is context aware.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Integration with React context
+### 1. Create a ```TypeInjectorContext```
+```typescript
+import React from 'react';
+import { TypeInjector } from 'type-injector-lib';
 
-## Available Scripts
+export const TypeInjectorContext = React.createContext(new TypeInjector());
+```
+### 2. Use it in your ```React.Component```
+```typescript
+import React from 'react';
+import { TypeInjectorContext } from './type-injector.context';
+import { BusinessService } from 'type-injector-lib-demo-common-api';
 
-In the project directory, you can run:
+class BusinessViewWithContext extends React.Component {
+  static contextType = TypeInjectorContext;
+  context!: React.ContextType<typeof TypeInjectorContext>;
 
-### `npm start`
+  private _businessService!: BusinessService;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  initialize() {
+    this.initialize = () => {};
+    this._businessService = this.context.get(BusinessService);
+  }
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  render() {
+    this.initialize();
+    return <div>{this._businessService.createdValue}</div>;
+  }
+}
 
-### `npm test`
+export default BusinessViewWithContext;
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Create a sub-context/-scope
+```typescript
+import React, { ReactNode } from 'react';
+import { InjectorScope, TypeInjector } from 'type-injector-lib';
+import { injectToken } from 'type-injector-lib-demo-common-api';
+import { TypeInjectorContext } from './type-injector.context';
 
-### `npm run build`
+class AuthorizedScope extends React.Component<{ children: ReactNode }> {
+  static contextType = TypeInjectorContext;
+  context!: React.ContextType<typeof TypeInjectorContext>
+  token!: string;
+  authorizedInjector!: TypeInjector;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  initialize() {
+    this.initialize = () => {};
+    const token = this.token = `Token${Math.round(Math.random() * 9)}`;
+    this.authorizedInjector = InjectorScope.construct()
+      .withIdent(Symbol.for('authorized'))
+      .fromParent(this.context)
+      .provideValue(injectToken.simpleValue, `Auth: ${token}`)
+    .build();
+  }
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  render() {
+    this.initialize();
+    return (<div>
+      <h2>Authorized scope</h2>
+      <TypeInjectorContext.Provider value={this.authorizedInjector}>
+        {this.props.children}
+      </TypeInjectorContext.Provider>
+    </div>);
+  }
+}
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+export default AuthorizedScope;
+```
 
-### `npm run eject`
+## Integration without context
+### Create a ```globalTypeInjector```
+```typescript
+export const globalTypeInjector = new TypeInjector();
+```
+### You can use it directly at the property initialization
+```typescript
+import React from 'react';
+import { globalTypeInjector } from './global-type-injector';
+import { BusinessService } from 'type-injector-lib-demo-common-api';
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+class BusinessView extends React.Component {
+  private _businessService = globalTypeInjector.get(BusinessService);
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  render() {
+    return <div>this._businessService.createdValue</div>;
+  }
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+export default BusinessView;
+```
+### Or even simpler without a property
+```typescript
+import { globalTypeInjector } from './type-injector.context';
+import { BusinessService } from 'type-injector-lib-demo-common-api';
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+const BusinessViewWithoutContext = () => <div>{globalTypeInjector.get(BusinessService).createdValue}</div>;
+export default BusinessViewWithoutContext;
+```

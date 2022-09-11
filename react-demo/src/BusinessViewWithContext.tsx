@@ -2,7 +2,7 @@ import React from 'react';
 import { TypeInjectorContext } from './type-injector.context';
 import { BusinessService } from 'type-injector-lib-demo-common-api';
 
-class BusinessView extends React.Component {
+class BusinessViewWithContext extends React.Component {
   static contextType = TypeInjectorContext;
   context!: React.ContextType<typeof TypeInjectorContext>;
 
@@ -15,8 +15,8 @@ class BusinessView extends React.Component {
 
   render() {
     this.initialize();
-    return this._businessService.createdValue;
+    return <div>{this._businessService.createdValue}</div>;
   }
 }
 
-export default BusinessView;
+export default BusinessViewWithContext;
