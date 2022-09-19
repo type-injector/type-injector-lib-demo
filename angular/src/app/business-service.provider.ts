@@ -1,5 +1,5 @@
 import { FactoryProvider } from '@angular/core';
-import { TypeInjector } from 'type-injector-lib';
+import { TypeInjector } from '@type-injector/lib';
 import { BusinessService } from 'type-injector-lib-demo-common-api';
 import { TypeInjectorService } from './type-injector.service';
 

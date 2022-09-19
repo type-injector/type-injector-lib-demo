@@ -1,4 +1,4 @@
-import { declareInjectToken } from 'type-injector-lib';
+import { declareInjectToken } from '@type-injector/lib';
 
 export const injectToken = {
     simpleValue: declareInjectToken<string>('simple value'),

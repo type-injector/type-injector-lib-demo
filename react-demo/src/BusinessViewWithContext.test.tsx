@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import BusinessViewWithContext from './BusinessViewWithContext';
 import { globalTypeInjector, TypeInjectorContext } from './type-injector.context';
-import { InjectorScope } from 'type-injector-lib';
+import { InjectorScope } from '@type-injector/lib';
 import { injectToken } from 'type-injector-lib-demo-common-api';
 
 describe('business view with context', () => {

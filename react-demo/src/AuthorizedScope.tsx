@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { InjectorScope, TypeInjector } from 'type-injector-lib';
+import { InjectorScope, TypeInjector } from '@type-injector/lib';
 import { injectToken } from 'type-injector-lib-demo-common-api';
 import { TypeInjectorContext } from './type-injector.context';
 

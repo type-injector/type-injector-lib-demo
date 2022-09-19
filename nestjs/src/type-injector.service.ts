@@ -3,7 +3,7 @@ import {
   InjectToken,
   Logger as TypeInjectorLogger,
   TypeInjector,
-} from 'type-injector-lib';
+} from '@type-injector/lib';
 import {
   BusinessService,
   injectToken,

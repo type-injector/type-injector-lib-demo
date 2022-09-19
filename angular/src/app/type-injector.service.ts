@@ -1,6 +1,6 @@
-import { FactoryProvider, Inject, Injectable, InjectionToken, Optional, SkipSelf } from '@angular/core';
-import { Logger, TypeInjector, InjectToken, InjectorScope } from 'type-injector-lib';
-import { BusinessService, InfoLogger, injectToken } from 'type-injector-lib-demo-common-api';
+import { Inject, Injectable, Optional, SkipSelf } from '@angular/core';
+import { InjectorScope, InjectToken, TypeInjector } from '@type-injector/lib';
+import { injectToken } from 'type-injector-lib-demo-common-api';
 import { AuthToken } from './auth-token.const';
 import { globalTypeInjector } from './global-type-injector';
 

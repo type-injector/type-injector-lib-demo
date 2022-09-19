@@ -1,7 +1,7 @@
 {
   "name": "type-injector-demo-node-js",
   "version": "1.0.0",
-  "description": "show usage of typeinjector in node-js",
+  "description": "example usage of @type-injector/lib in plain nodejs projects",
   "main": "index.js",
   "scripts": {
     "test": "mocha \"./*.spec.js\""
@@ -16,7 +16,7 @@
     "mocha": "^10.0.0"
   },
   "dependencies": {
-    "type-injector-lib": "^1.0.0-alpha-7",
+    "@type-injector/lib": "^1.0.0-beta.2",
     "type-injector-lib-demo-common-api": "file:../common-api/type-injector-lib-demo-common-api-1.0.0.tgz"
   }
 }

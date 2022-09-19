@@ -1,4 +1,4 @@
-import { InjectFactory, InjectToken, Logger, TypeInjector } from 'type-injector-lib';
+import { InjectFactory, InjectToken, Logger, TypeInjector } from '@type-injector/lib';
 import { InfoLogger, injectToken } from 'type-injector-lib-demo-common-api';
 
 export class LazyTypeInjector extends TypeInjector {

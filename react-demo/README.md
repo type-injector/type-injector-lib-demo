@@ -6,7 +6,7 @@ React has no DI-Container in its core library. But react provides a context that
 ### 1. Create a ```TypeInjectorContext```
 ```typescript
 import React from 'react';
-import { TypeInjector } from 'type-injector-lib';
+import { TypeInjector } from '@type-injector/lib';
 
 export const TypeInjectorContext = React.createContext(new TypeInjector());
 ```
@@ -39,7 +39,7 @@ export default BusinessViewWithContext;
 ### Create a sub-context/-scope
 ```typescript
 import React, { ReactNode } from 'react';
-import { InjectorScope, TypeInjector } from 'type-injector-lib';
+import { InjectorScope, TypeInjector } from '@type-injector/lib';
 import { injectToken } from 'type-injector-lib-demo-common-api';
 import { TypeInjectorContext } from './type-injector.context';
 

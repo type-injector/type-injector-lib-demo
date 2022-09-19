@@ -1,5 +1,5 @@
 (() => {
-  // node_modules/type-injector-lib/dist/bundles/type-injector-lib.mjs
+  // node_modules/@type-injector/lib/dist/bundles/type-injector-lib.mjs
   var Logger = class {
     error(message, ...details) {
       console.error(message, ...details);

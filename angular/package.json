@@ -1,6 +1,7 @@
 {
   "name": "angular",
   "version": "0.0.0",
+  "description": "example usage of @type-injector/lib in angular projects",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -19,9 +20,9 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "@type-injector/lib": "^1.0.0-beta.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "type-injector-lib": "^1.0.0-alpha-7",
     "type-injector-lib-demo-common-api": "file:../common-api/type-injector-lib-demo-common-api-1.0.0.tgz",
     "zone.js": "~0.11.4"
   },

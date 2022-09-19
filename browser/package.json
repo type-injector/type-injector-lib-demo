@@ -1,7 +1,7 @@
 {
   "name": "browser",
   "version": "1.0.0",
-  "description": "",
+  "description": "example usage of @type-injector/lib in (modern) browser scripts",
   "main": "app-text.component.js",
   "scripts": {
     "start": "http-server www",
@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "type-injector-lib": "^1.0.0-alpha-7",
+    "@type-injector/lib": "^1.0.0-beta.2",
     "type-injector-lib-demo-common-api": "file:../common-api/type-injector-lib-demo-common-api-1.0.0.tgz"
   },
   "devDependencies": {
