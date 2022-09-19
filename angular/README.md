@@ -1,4 +1,6 @@
-# Inetgrate type injector lib into angular
+# Inetgrate Type Injector Lib into Angular
+***looking for other [framework integrations](../README.md)?***  
+
 Angular has an own injection system but this system knows nothing about services from ```type-injector-lib```.
 So you have to connect those systems somehow. This example shows three different ways to integrate type injector into angular:
 

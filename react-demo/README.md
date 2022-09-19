@@ -1,4 +1,6 @@
 # Inetgrate type injector lib into React
+***looking for other [framework integrations](../README.md)?***  
+
 React has no DI-Container in its core library. But react provides a context that can provide values and services.
 ```type-injector-lib``` can get integrated into this context so it provides a complete DI-Container that is context aware.
 

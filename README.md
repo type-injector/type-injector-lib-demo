@@ -1,10 +1,10 @@
 # Type Injector Lib Demo
-This projects test bundling and usage of [type-injector-lib](https://github.com/e-hein/type-injector-lib).  
+This projects test bundling and usage of [@type-injector/lib](https://github.com/type-injector/type-injector-lib).  
 It shows the integration into different project environments:
 
 * [common-api](./common-api) defines an independant business service
 * browser
-  * [browser](./brwoser) shows the usage in browser without framework
+  * [browser](./browser) shows the usage in browser without framework
   * [angular](./angular) shows integration into Angular injection framework
   * [react](./react-demo) shows the integration into React.Context
 * server
