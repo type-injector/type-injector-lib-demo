@@ -21,7 +21,9 @@
     "dist"
   ],
   "scripts": {
+    "build-es":"tsc -P tsconfig.es2020.json", 
     "build": "node build.cjs",
+    "build-cjs": "tsc -P tsconfig.cjs.json",
     "test": "mocha -r ts-node/register \"src/**/*.spec.ts\""
   },
   "author": "",
