@@ -7,6 +7,7 @@ It shows the integration into different project environments:
   * [browser](./browser) shows the usage in browser without framework
   * [angular](./angular) shows integration into Angular injection framework
   * [react](./react-demo) shows the integration into React.Context
+  * [stencil](./stencil-demo) shows the integration into Stencil 
 * server
   * [nodejs](./nodejs) shows the usage of the business service in a node environment
   * [nestjs](./nestjs) shows the integration into NestJS injection framework
