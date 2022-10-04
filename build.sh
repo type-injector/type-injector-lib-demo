@@ -10,3 +10,4 @@ buildNestJsDemo
 buildBrowserDemo
 buildAngularDemo
 buildReactDemo
+buildStencilJsDemo

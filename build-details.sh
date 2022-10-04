@@ -47,3 +47,10 @@ function buildReactDemo {
   npm run build
   CI=true npm run test
 }
+
+function buildStencilJsDemo {
+  cd stencil-demo
+  npm i ../common-api/$API_PACKAGE
+  npm run build
+  npm run test
+}
