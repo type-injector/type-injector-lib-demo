@@ -1,4 +1,6 @@
 import { Component, h } from '@stencil/core';
+import { BusinessService } from 'type-injector-lib-demo-common-api';
+import {injector} from '../../type-injector'
 
 @Component({
   tag: 'app-root',
@@ -6,7 +8,12 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class AppRoot {
+
+  
   render() {
+    
+    const businessService = injector.get(BusinessService);
+
     return (
       <div>
         <header>
@@ -14,12 +21,11 @@ export class AppRoot {
         </header>
 
         <main>
-          <stencil-router>
-            <stencil-route-switch scrollTopOffset={0}>
-              <stencil-route url="/" component="app-home" exact={true} />
-              <stencil-route url="/profile/:name" component="app-profile" />
-            </stencil-route-switch>
-          </stencil-router>
+          <h1>
+            {
+              businessService.createdValue
+            }
+          </h1>
         </main>
       </div>
     );
