@@ -1,20 +1,23 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { BusinessService } from "type-injector-lib-demo-common-api";
+import { injector } from "./type-injector";
+
+const businessService = injector.get(BusinessService);
+const value: string = businessService.createdValue;
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <img
+      alt="Vue logo"
+      class="logo"
+      src="./assets/logo.svg"
+      width="125"
+      height="125"
+    />
   </header>
 
-  <main>
-    <TheWelcome />
-  </main>
+  <main class="container">{{ value }}</main>
 </template>
 
 <style scoped>
@@ -27,6 +30,11 @@ header {
   margin: 0 auto 2rem;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 @media (min-width: 1024px) {
   header {
     display: flex;
@@ -36,12 +44,6 @@ header {
 
   .logo {
     margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
   }
 }
 </style>
