@@ -47,3 +47,10 @@ function buildReactDemo {
   npm run build
   CI=true npm run test
 }
+
+function buildVueDemo {
+  cd vue-demo
+  npm i ../common-api/$API_PACKAGE
+  npm run build
+  npm run test:unit
+}
