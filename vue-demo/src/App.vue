@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { BusinessService } from "type-injector-lib-demo-common-api";
-import { injector } from "./type-injector";
+import AuthenticatdScope from "./AuthenticatdScope.vue";
+import { typeInjector } from "./type-injector";
+import MessageDisplay from "./MessageDisplay.vue";
 
-const businessService = injector.get(BusinessService);
-const value: string = businessService.createdValue;
+const businessService = typeInjector().get(BusinessService);
+const message: string = businessService.createdValue;
 </script>
 
 <template>
@@ -17,7 +19,22 @@ const value: string = businessService.createdValue;
     />
   </header>
 
-  <main class="container">{{ value }}</main>
+  <main class="container">
+    <section>
+      <h2>direct usage:</h2>
+      {{ message }}
+    </section>
+    <section>
+      <h2>usage in child:</h2>
+      <MessageDisplay />
+    </section>
+    <section>
+      <h2>usage in scope:</h2>
+      <AuthenticatdScope>
+        <MessageDisplay />
+      </AuthenticatdScope>
+    </section>
+  </main>
 </template>
 
 <style scoped>
@@ -32,6 +49,8 @@ header {
 
 .container {
   display: flex;
+  column-gap: 2em;
+  row-gap: 2em;
   justify-content: center;
 }
 
