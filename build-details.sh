@@ -49,17 +49,18 @@ function buildReactDemo {
   cd ..
 }
 
+function buildStencilJsDemo {
+  cd stencil-demo
+  npm i ../common-api/$API_PACKAGE
+  npm run build
+  npm run test
+  cd ..
+}
+
 function buildVueDemo {
   cd vue-demo
   npm i ../common-api/$API_PACKAGE
   npm run build
   npm run coverage
   cd ..
-}
-
-function buildStencilJsDemo {
-  cd stencil-demo
-  npm i ../common-api/$API_PACKAGE
-  npm run build
-  npm run test
 }
