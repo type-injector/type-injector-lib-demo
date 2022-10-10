@@ -22,7 +22,7 @@ const message: string = businessService.createdValue;
   <main class="container">
     <section>
       <h2>direct usage:</h2>
-      {{ message }}
+      <p>{{ message }}</p>
     </section>
     <section>
       <h2>usage in child:</h2>
