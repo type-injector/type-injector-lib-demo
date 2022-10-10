@@ -11,3 +11,4 @@ buildBrowserDemo
 buildAngularDemo
 buildReactDemo
 buildStencilJsDemo
+buildVueDemo
