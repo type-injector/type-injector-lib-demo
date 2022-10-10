@@ -53,6 +53,6 @@ function buildVueDemo {
   cd vue-demo
   npm i ../common-api/$API_PACKAGE
   npm run build
-  npm run test:unit
+  npm run coverage
   cd ..
 }
