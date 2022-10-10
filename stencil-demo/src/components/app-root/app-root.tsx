@@ -1,6 +1,6 @@
 import { Component, h } from '@stencil/core';
 import { BusinessService } from 'type-injector-lib-demo-common-api';
-import {injector} from '../../type-injector'
+import {injector} from '../../global/type-injector'
 
 @Component({
   tag: 'app-root',
@@ -9,9 +9,9 @@ import {injector} from '../../type-injector'
 })
 export class AppRoot {
 
-  
+
   render() {
-    
+
     const businessService = injector.get(BusinessService);
 
     return (
