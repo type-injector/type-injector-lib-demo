@@ -20,7 +20,7 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
-    "@type-injector/lib": "^1.0.0-beta.2",
+    "@type-injector/lib": "^1.0.0-beta.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "type-injector-lib-demo-common-api": "file:../common-api/type-injector-lib-demo-common-api-1.0.0.tgz",
