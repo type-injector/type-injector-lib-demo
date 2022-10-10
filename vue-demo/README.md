@@ -17,7 +17,7 @@ export const globalTypeInjector = TypeInjector.construct()
   .build();
 ```
 
-## 2. Create a simple convinient method ```typeInjector()`` that connects both worlds:
+## 2. Create a simple convinient method ```typeInjector()``` that connects both worlds:
 ```typescript
 export const typeInjectorToken = Symbol.for('type injector');
 
