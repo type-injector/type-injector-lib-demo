@@ -1,0 +1,13 @@
+.integration {
+	padding: 0.5rem;
+	margin: 0.5rem;
+	text-align: left;
+	font-size: 16px;
+	font-weight: bold;
+	color: black;
+}
+
+.integration > h3 {
+	margin: 0.5rem;
+	padding: 0.5rem;
+}
