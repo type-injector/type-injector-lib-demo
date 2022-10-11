@@ -1,21 +1,17 @@
-import { h } from 'preact';
-import { Route, Router } from 'preact-router';
-
-import Header from './header';
+import { h } from 'preact'
+import AuthorizedScope from './authorized-scope'
+import Header from './header'
+import IntegrationVariants from './integration-variants'
 
 // Code-splitting is automated for `routes` directory
-import Home from '../routes/home';
-import Profile from '../routes/profile';
 
 const App = () => (
-	<div id="app">
-        <Header />
-        <Router>
-            <Route path="/" component={Home} />
-            <Route path="/profile/" component={Profile} user="me" />
-            <Route path="/profile/:user" component={Profile} />
-        </Router>
-    </div>
-);
+	<div id='app'>
+		<Header />
+		<AuthorizedScope>
+			<IntegrationVariants></IntegrationVariants>
+		</AuthorizedScope>
+	</div>
+)
 
-export default App;
+export default App
