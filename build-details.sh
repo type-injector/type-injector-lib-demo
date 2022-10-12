@@ -46,4 +46,13 @@ function buildReactDemo {
   npm i ../common-api/$API_PACKAGE
   npm run build
   CI=true npm run test
+  cd ..
+}
+
+function buildPreactDemo {
+  cd preact-demo
+  npm i ../common-api/$API_PACKAGE
+  npm run build
+  npm run test
+  cd ..
 }
