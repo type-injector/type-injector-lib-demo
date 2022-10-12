@@ -9,7 +9,7 @@ const App = () => (
 	<div id='app'>
 		<Header />
 		<AuthorizedScope>
-			<IntegrationVariants></IntegrationVariants>
+			<IntegrationVariants />
 		</AuthorizedScope>
 	</div>
 )
